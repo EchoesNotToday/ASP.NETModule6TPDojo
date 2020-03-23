@@ -97,6 +97,11 @@ namespace ASP.NETModule6TPDojo.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            List<Samourai> samouraisAvecArme = db.Samourais.Where(s=>s.Arme.Id == id).ToList();
+            if(samouraisAvecArme.Any())
+            {
+                ViewBag.SamouraiAvecArme = samouraisAvecArme.Select(s => s.Nom).ToList();
+            }
             Arme arme = db.Armes.Find(id);
             if (arme == null)
             {
@@ -111,6 +116,13 @@ namespace ASP.NETModule6TPDojo.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Arme arme = db.Armes.Find(id);
+            List<Samourai> samouraisAvecArme = db.Samourais.Where(s => s.Arme.Id == id).ToList();
+            
+            foreach(Samourai samourai in samouraisAvecArme)
+            {
+                samourai.Arme = null;
+            }
+
             db.Armes.Remove(arme);
             db.SaveChanges();
             return RedirectToAction("Index");
