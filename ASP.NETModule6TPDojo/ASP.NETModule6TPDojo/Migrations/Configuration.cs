@@ -10,7 +10,6 @@ namespace ASP.NETModule6TPDojo.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "ASP.NETModule6TPDojo.context";
         }
 
         protected override void Seed(ASP.NETModule6TPDojo.Data.DojoContext context)

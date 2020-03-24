@@ -7,13 +7,13 @@ namespace ASP.NETModule6TPDojo.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class InitialMigration : IMigrationMetadata
+    public sealed partial class UpdateModel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "202003231340161_InitialMigration"; }
+            get { return "202003241004234_UpdateModel"; }
         }
         
         string IMigrationMetadata.Source

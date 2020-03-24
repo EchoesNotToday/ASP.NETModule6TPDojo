@@ -32,6 +32,12 @@
         @Html.DisplayFor(modelItem => item.Arme.Nom)
     </td>
     <td>
+        @foreach (var artMartial in item.ArtsMartiaux)
+        {
+            @Html.DisplayFor(ar => artMartial.Nom);
+        }
+    </td>
+    <td>
         @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
         @Html.ActionLink("Details", "Details", new { id = item.Id }) |
         @Html.ActionLink("Delete", "Delete", new { id = item.Id })

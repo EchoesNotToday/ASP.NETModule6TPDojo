@@ -128,15 +128,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArmesController.cs" />
+    <Compile Include="Controllers\ArtMartiauxController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SamouraisController.cs" />
     <Compile Include="Data\DojoContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003231340161_InitialMigration.cs" />
-    <Compile Include="Migrations\202003231340161_InitialMigration.designer.cs">
-      <DependentUpon>202003231340161_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202003241004234_UpdateModel.cs" />
+    <Compile Include="Migrations\202003241004234_UpdateModel.designer.cs">
+      <DependentUpon>202003241004234_UpdateModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SamouraiVM.cs" />
@@ -188,6 +189,11 @@
     <Content Include="Views\Armes\Details.cshtml" />
     <Content Include="Views\Armes\Edit.cshtml" />
     <Content Include="Views\Armes\Index.cshtml" />
+    <Content Include="Views\ArtMartiaux\Create.cshtml" />
+    <Content Include="Views\ArtMartiaux\Delete.cshtml" />
+    <Content Include="Views\ArtMartiaux\Details.cshtml" />
+    <Content Include="Views\ArtMartiaux\Edit.cshtml" />
+    <Content Include="Views\ArtMartiaux\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -212,8 +218,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003231340161_InitialMigration.resx">
-      <DependentUpon>202003231340161_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003241004234_UpdateModel.resx">
+      <DependentUpon>202003241004234_UpdateModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

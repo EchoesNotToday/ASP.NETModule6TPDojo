@@ -17,6 +17,15 @@
         <dd>
             @Html.DisplayFor(model => model.Nom)
         </dd>
+
+        <dt>
+            @Html.Label("Potentiel :")
+        </dt>
+
+        <dd>
+            @ViewBag.Potentiel
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.Force)
         </dt>
@@ -37,6 +46,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Arme.Degats)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ArtsMartiaux)
+        </dt>
+
+        <dd>
+            @Html.ListBoxFor(model => model.ArtsMartiaux, Model.ArtsMartiaux.Select(a => new SelectListItem { Value = a.Nom, Text = a.Nom }))
+
         </dd>
 
     </dl>

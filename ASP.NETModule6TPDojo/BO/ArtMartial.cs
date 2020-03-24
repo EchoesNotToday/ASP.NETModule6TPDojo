@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BO
 {
-    class ArtMartial
+    public class ArtMartial : ACommon
     {
+        public string Nom { get; set; }
     }
 }
